@@ -5,6 +5,7 @@ class YouTubeDebugger extends React.Component {
 
   constructor(){
     super()
+
     this.state = {
       errors: [],
       user: null,
@@ -37,8 +38,8 @@ class YouTubeDebugger extends React.Component {
 
   handleSecondClick(event){
     this.setState({
-      video: Object.assign({}, this.state.settings.video, {
-        resolution: '720p',
+      settings: Object.assign({}, this.state.settings, {
+        video: { resolution: '720p'},
       }),
     })
   }

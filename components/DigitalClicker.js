@@ -4,14 +4,19 @@ import ReactDOM from 'react-dom';
 class DigitalClicker extends React.Component {
   constructor() {
     super();
-
+    
     this.state = {
       timesClicked: 0,
     };
     this.handleClick = this.handleClick.bind(this)
   }
 
+  componentWillMount(){
+    console.log("kajlnsbcacj")
+  }
+
   handleClick(event){
+
     this.setState({timesClicked: this.state.timesClicked + 1})
   }
 
